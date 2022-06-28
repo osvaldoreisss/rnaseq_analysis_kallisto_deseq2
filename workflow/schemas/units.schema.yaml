@@ -1,0 +1,32 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+description: an entry in the units
+
+# columns that the config/samples.tsv file can have and which type they should be
+properties:
+  sample_name:
+    type: string
+    description: sample name/identifier
+  unit_name:
+    type: string
+    description: information about technical replicates (e.g. same sample in different lanes or libraries construction)
+  fq1:
+    type: string
+    description: path to the first fastq file
+  fq2:
+    type: string
+    description: path to the second fastq file
+  sra:
+    type: string
+    description: path to the SRA file
+  adapters:
+    type: string
+    description: path to the file containing the adapters to be removed from the reads
+  strandedness:
+    type: string
+    description: strandness of the reads (e.g. unstranded, forward, reverse)
+
+# columns that the config/samples.tsv file must have to pass schema validation
+required:
+  - sample_name
+  - unit_name

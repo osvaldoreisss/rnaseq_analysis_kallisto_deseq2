@@ -1,1 +1,5 @@
 sample_name	unit_name	fq1	fq2	sra	adapters	strandedness
+MAQCA_1	lane1	data/SRR3670977_test.fastq.gz				unstranded
+MAQCA_2	lane1	data/SRR3670981_test.fastq.gz				unstranded
+MAQCB_1	lane2	data/SRR3670985_test.fastq.gz				unstranded
+MAQCB_2	lane2	data/SRR3670989_test.fastq.gz				unstranded

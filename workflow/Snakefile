@@ -1,4 +1,20 @@
-# Main entrypoint of the workflow. 
-# Please follow the best practices: 
+# Main entrypoint of the workflow.
+# Please follow the best practices:
 # https://snakemake.readthedocs.io/en/stable/snakefiles/best_practices.html,
-# in particular regarding the standardized folder structure mentioned there. 
+# in particular regarding the standardized folder structure mentioned there.
+
+
+include: "rules/common.smk"
+
+
+rule all:
+    input:
+        expand(
+            "results/qc/fastqc/raw/{sample[0]}-{sample[1]}.{group}_fastqc.{suffix}",
+            sample=sample_unit,
+            suffix=["zip", "html"],
+            group=groups,
+        ),
+
+
+include: "rules/samples_qc.smk"

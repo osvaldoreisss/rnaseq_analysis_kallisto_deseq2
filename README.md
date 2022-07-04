@@ -1,8 +1,7 @@
-# Snakemake workflow: `rna-seq-star-deseq2 `
+# Snakemake workflow: `rnaseq_analysis_kallisto_deseq2`
 
 [![Snakemake](https://img.shields.io/badge/snakemake-≥6.3.0-brightgreen.svg)](https://snakemake.github.io)
-[![GitHub actions status](https://github.com/osvaldoreisss/rna-seq-star-deseq2/workflows/Tests/badge.svg?branch=main)](https://github.com/osvaldoreisss/rna-seq-star-deseq2/actions?query=branch%3Amain+workflow%3ATests)
-
+[![GitHub actions status](https://github.com/osvaldoreisss/rnaseq_analysis_kallisto_deseq2/workflows/Tests/badge.svg?branch=main)](https://github.com/osvaldoreisss/rnaseq_analysis_kallisto_deseq2/actions?query=branch%3Amain+workflow%3ATests)
 
 This is a Snakemake Workflow to perform a differential gene expression analysis from RNA-Seq experiments where the reference genome is provide.
 

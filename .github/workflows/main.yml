@@ -46,4 +46,4 @@ jobs:
         snakefile: workflow/Snakefile
         args: "--use-conda --show-failed-logs --cores 3 --conda-cleanup-pkgs cache --all-temp"
     - name: Unit test workflow
-      run: python -m pytest -vv -r sx .tests
+      run: pytest -vv -r sx .tests

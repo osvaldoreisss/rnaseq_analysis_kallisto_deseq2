@@ -39,16 +39,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Test workflow
+    - name: Integration test workflow
       uses: snakemake/snakemake-github-action@v1.24.0
       with:
         directory: .test
         snakefile: workflow/Snakefile
         args: "--use-conda --show-failed-logs --cores 3 --conda-cleanup-pkgs cache --all-temp"
-
-    - name: Test report
-      uses: snakemake/snakemake-github-action@v1.24.0
-      with:
-        directory: .test
-        snakefile: workflow/Snakefile
-        args: "--report report.zip"
+    - name: Unit test workflow
+      run: python -m pytest -vv -r sx .tests

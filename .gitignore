@@ -3,3 +3,10 @@ resources/**
 logs/**
 .snakemake
 .snakemake/**
+.tests/results/**
+.tests/logs/**
+.tests/.snakemake
+.tests/.snakemake/**
+.tests/unit/__pycache__/**
+.tests/unit/.snakemake
+.tests/unit/.snakemake/**

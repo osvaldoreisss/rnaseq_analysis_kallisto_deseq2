@@ -11,3 +11,18 @@ rule fastqc_raw_reads:
     threads: threads
     wrapper:
         "v1.7.0/bio/fastqc"
+
+rule cutadapt:
+    input:
+        get_input_cutadapt_se,
+    output:
+        fastq="results/trimmed/{sample}-{unit}.{group}.fastq",
+        qc="results/trimmed/{sample}-{unit}.{group}.qc.txt"
+    params:
+        adapters="-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC",
+        extra="-q 20"
+    log:
+        "logs/cutadapt/{sample}-{unit}.{group}.log"
+    threads: 4 # set desired number of threads here
+    wrapper:
+        "v1.7.0/bio/cutadapt/se"

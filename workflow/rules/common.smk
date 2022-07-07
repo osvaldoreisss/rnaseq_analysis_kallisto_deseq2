@@ -42,3 +42,14 @@ def get_fastqc_input(wildcards):
         return fastqs.fq2
     else:
         raise ValueError("group must be either 'R1' or 'R2'")
+
+def get_input_cutadapt_se(wildcards):
+    try:
+        fastqs = units.loc[wildcards["sample"], wildcards["unit"]].dropna()
+    except KeyError:
+        raise ValueError(
+            "Sample {} or unit {} not found in units file".format(
+                wildcards["sample"], wildcards["unit"]
+            )
+        )
+    return fastqs.fq1

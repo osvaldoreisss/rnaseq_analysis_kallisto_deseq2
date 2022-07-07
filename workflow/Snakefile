@@ -15,6 +15,11 @@ rule all:
             suffix=["zip", "html"],
             group=groups,
         ),
-
+        expand(
+            "results/trimmed/{sample[0]}-{sample[1]}.{group}.{suffix}",
+            sample=sample_unit,
+            suffix=["fastq", "qc.txt"],
+            group=groups,
+        ),
 
 include: "rules/samples_qc.smk"

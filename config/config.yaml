@@ -1,0 +1,7 @@
+# path to the file in TSV format that contains the samples information (sample, condition)
+samples: config/samples.tsv
+
+# path to the file in TSV format that contains informatin about the files to be processed (sample_name, unit_name, fq1, fq2, sra, adapters, strandedness)
+units: config/units.tsv
+
+threads: 1
